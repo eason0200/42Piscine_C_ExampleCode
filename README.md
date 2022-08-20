@@ -1,2 +1,2 @@
-# 42Piscine_C_ExampleCode
-Some example C code
+# 42Piscine_C_MainCode
+Some example C code(main.c)
