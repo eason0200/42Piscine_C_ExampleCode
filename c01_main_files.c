@@ -8,8 +8,9 @@ int	main(void)
 	int	*nbr;
 	int	integer;
 
-	integer = 100;
+	integer = 100;  //testing if you print 42 or 100
 	nbr = &integer;
+	printf("%d\n", integer); //100 will be printed
 	ft_ft(nbr);
 	printf("%d\n", integer); //42 will be printed
 	return (0);
