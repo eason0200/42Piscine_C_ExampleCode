@@ -87,8 +87,8 @@ int	main(void)
   printf("%d",b);  //b = 10
   
 	ft_div_mod(a, b, div, mod);
-	printf("a: %d\n", a);  //a = 18
-	printf("b: %d\n", b);   //b =5
+	printf("a: %d\n", a);  //a = 185
+	printf("b: %d\n", b);   //b =10
 	printf ("a/b: %d\n", *div); 
 	printf("%d", *mod);
 }
