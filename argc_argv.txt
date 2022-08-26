@@ -1,0 +1,82 @@
+//	argc = argumnet count
+//	argv = argument vector
+// ./a.out      | 1 argument count | argc = 1
+//./a.out	a	b	c	| 4 argument count | argc = 4
+
+//int	main(int argc, char ** argv)
+
+//-----------------------------------------------
+//lets take example of : ./a.out	a1	b12	c123	
+
+// ** argv = argv[][]	(argv[index0][index1])
+//therefore:
+//argv[0][0] == '.'
+//argv[0][2] == 'a'
+//argv[1][1] == '1'
+//argv[3][0] == 'c'
+//------------------------------------------------
+//Refering to same example:
+//argv[0] == "./a.out"
+//argv[2] == "b12"
+// argument count include program name(a.out) and start from 1 instead of 0
+//therefore , argc = 4
+//argument vector start from 0 because index start from 0, computer count from 0
+
+//Application and sample code
+
+//Print program name (a.out)
+// int i and int j are counter
+#include <unistd.h>
+void	print(char c)
+{
+	write(1, &c, 1);
+}
+int	main(int argc, char **argv)
+{
+	int	;
+	int	j;
+
+	if (argc > 1)
+	{
+		i = 1;
+		while (argv[i][j] != '\0')
+		{
+			j = 0;
+			while (argv[i][j])
+			{
+				print(argv[i][j]);
+				j++;
+			}
+			print ("\n");
+			i++;
+		}
+	}
+	return (0);
+}
+
+//Make uppercase alphabet lowercase & make lowercase alphabet uppercase, argument count only 2, otherwise print new line
+#include <unistd.h>
+int	main(int argc, char **argv)
+{
+	int	i;
+	
+	i = 0;
+	if (argc == 2)
+	{
+		while (argv[1][i] != '\0')
+		{
+			if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')
+			{
+				argv[1][i] = argv[1][i] + 32;
+			}
+			if (argv[1][i] >= 'a' && argv[1][i] <= 'z')
+			{
+				argv[1][i] = argv[1][i] - 32;
+			}
+			write(1, &(argv[1][i]), 1);
+			i++;
+		}
+	}
+	write(1, "\n", 1);
+	return (0);
+}
