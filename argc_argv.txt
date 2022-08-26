@@ -33,7 +33,7 @@ void	print(char c)
 }
 int	main(int argc, char **argv)
 {
-	int	;
+	int	i;
 	int	j;
 
 	if (argc > 1)
